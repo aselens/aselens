@@ -12,7 +12,6 @@
   <a href="https://github.com/aselens?tab=repositories">
     <img src="https://img.shields.io/badge/Projects-7%20public-181717?style=for-the-badge&logo=github&logoColor=white" alt="Projects">
   </a>
-  <img src="https://komarev.com/ghpvc/?username=aselens&style=for-the-badge&color=0E7490&label=Profile+views" alt="Profile views">
 </div>
 
 ---
@@ -71,11 +70,12 @@ repository.
 
 ---
 
-## 📊 Stats
+## 📊 GitHub
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=aselens&show_icons=true&hide_border=true&theme=tokyonight&hide_title=true" alt="GitHub stats">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aselens&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="Top languages">
+  <img src="https://img.shields.io/github/followers/aselens?style=for-the-badge&color=0E7490&labelColor=0D162B&logo=github&logoColor=white" alt="Followers">
+  <img src="https://img.shields.io/github/stars/aselens?style=for-the-badge&color=0E7490&labelColor=0D162B&logo=github&logoColor=white" alt="Stars">
+  <img src="https://img.shields.io/badge/License-GPL--3.0-0E7490?style=for-the-badge&labelColor=0D162B" alt="Licence">
 </div>
 
 ---
