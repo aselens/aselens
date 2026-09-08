@@ -73,9 +73,21 @@ repository.
 ## 📊 GitHub
 
 <div align="center">
-  <img src="https://img.shields.io/github/followers/aselens?style=for-the-badge&color=0E7490&labelColor=0D162B&logo=github&logoColor=white" alt="Followers">
-  <img src="https://img.shields.io/github/stars/aselens?style=for-the-badge&color=0E7490&labelColor=0D162B&logo=github&logoColor=white" alt="Stars">
-  <img src="https://img.shields.io/badge/License-GPL--3.0-0E7490?style=for-the-badge&labelColor=0D162B" alt="Licence">
+  <img src="profile-summary-card-output/github_dark/0-profile-details.svg" width="98%" alt="Profile details and contributions over the last year">
+</div>
+
+<div align="center">
+  <img src="profile-summary-card-output/github_dark/1-repos-per-language.svg" height="205" alt="Top languages by repository">
+  <img src="profile-summary-card-output/github_dark/4-productive-time.svg" height="205" alt="Commits by hour of day">
+</div>
+
+<div align="center">
+  <img src="profile-summary-card-output/github_dark/2-most-commit-language.svg" height="205" alt="Most committed languages">
+  <img src="profile-summary-card-output/github_dark/3-stats.svg" height="205" alt="Stats">
+</div>
+
+<div align="center">
+  <sub>Cards are regenerated once a day by a workflow in this repository, not fetched from an outside service when the page loads.</sub>
 </div>
 
 ---
