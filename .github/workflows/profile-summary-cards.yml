@@ -1,0 +1,40 @@
+# Карточки статистики профиля.
+#
+# Здесь важна не сама картинка, а способ её доставки. Сервисы вроде
+# github-readme-stats рисуют SVG в момент открытия страницы, живут на общем
+# бесплатном хостинге и регулярно отдают 503 — на профиле это выглядит как
+# битая картинка. Это действие вместо того раз в сутки генерирует SVG и
+# кладёт их в сам репозиторий: дальше их отдаёт GitHub, и падать нечему.
+
+name: Profile summary cards
+
+on:
+  schedule:
+    # Раз в сутки, 03:00 UTC — то есть 06:00 по Москве.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Сгенерировать карточки
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          # Обычного токена задания хватает для всего, кроме графика вкладов:
+          # его отдаёт GraphQL, а туда нужен личный токен с правом read:user.
+          # Если секрет SUMMARY_GITHUB_TOKEN заведён — берём его, иначе
+          # работаем на встроенном.
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN != '' && secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: "main"
+          # Смещение взято из времени коммитов: они идут с +0300.
+          UTC_OFFSET: 3
+          THEME: "github_dark"
+          AUTO_PUSH: true
