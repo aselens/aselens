@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Do1oresH4Ze — desktop and Android developer">
+  <defs>
+    <!-- Основной фон: тёмно-синий уходит в бирюзу по диагонали. -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d162b"/>
+      <stop offset="55%" stop-color="#0f4a63"/>
+      <stop offset="100%" stop-color="#105e7a"/>
+    </linearGradient>
+
+    <!-- Блик, проезжающий по баннеру раз в несколько секунд. -->
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Подзаголовок печатается: прямоугольник отсечения раздвигается. -->
+    <clipPath id="typing">
+      <rect x="240" y="188" width="0" height="40">
+        <animate attributeName="width" from="0" to="800"
+                 begin="1.1s" dur="1.9s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+
+  <!-- Блик. Ширина в треть баннера, проезд справа налево с долгой паузой. -->
+  <g>
+    <rect x="-460" y="0" width="460" height="320" fill="url(#shine)">
+      <animate attributeName="x" from="-460" to="1280"
+               dur="7s" begin="1.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Две волны внизу. Каждая нарисована на двойную ширину и едет влево
+       ровно на один свой период — поэтому стык не виден, а движение
+       выглядит бесконечным. Разная скорость даёт ощущение глубины. -->
+  <g opacity="0.10">
+    <path d="M0,250 C160,215 320,285 480,250 C640,215 800,285 960,250 C1120,215 1280,285 1440,250 C1600,215 1760,285 1920,250 C2080,215 2240,285 2400,250 L2560,250 L2560,320 L0,320 Z" fill="#ffffff">
+      <animateTransform attributeName="transform" type="translate"
+                        from="0 0" to="-960 0" dur="14s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g opacity="0.16">
+    <path d="M0,272 C200,244 400,300 600,272 C800,244 1000,300 1200,272 C1400,244 1600,300 1800,272 C2000,244 2200,300 2400,272 L2560,272 L2560,320 L0,320 Z" fill="#ffffff">
+      <animateTransform attributeName="transform" type="translate"
+                        from="0 0" to="-1200 0" dur="9s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Имя: всплывает снизу и проявляется. Один раз, без повтора. -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      from="0 18" to="0 0" dur="1.1s" fill="freeze"
+                      calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1"/>
+    <text x="640" y="150" text-anchor="middle"
+          font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="66" font-weight="700" fill="#ffffff" opacity="0">
+      Do1oresH4Ze
+      <animate attributeName="opacity" from="0" to="1" dur="1.1s" fill="freeze"/>
+    </text>
+  </g>
+
+  <!-- Подзаголовок под отсечением: буквы открываются слева направо. -->
+  <g clip-path="url(#typing)">
+    <text x="640" y="216" text-anchor="middle"
+          font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="21" font-weight="400" fill="#e2e8f0" opacity="0.88">
+      Desktop and Android developer  ·  InoMotion
+    </text>
+  </g>
+
+  <!-- Курсор печати: едет вместе с текстом и мигает, потом исчезает. -->
+  <rect y="192" width="2" height="26" fill="#7dd3fc" opacity="0">
+    <animate attributeName="x" from="400" to="880"
+             begin="1.1s" dur="1.9s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <animate attributeName="opacity" values="0;1;1;0"
+             keyTimes="0;0.02;0.9;1" begin="1.1s" dur="2.6s" fill="freeze"/>
+  </rect>
+</svg>
